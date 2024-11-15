@@ -14,34 +14,77 @@
   </ion-header>
 
   <div class="input-area" >
-    <ion-input fill="outline" label="Nama" [(ngModel)] = "name" ></ion-input>
+    <ion-input fill="outline" label="Nama" [(ngModel)] = "dataWillSubmitted.name" ></ion-input>
     <!-- Uncomment Ini untuk debugging -->
-     <!-- <p>{{ name }}</p> -->
+     <!-- <p>{{ dataWillSubmitted.name }}</p> -->
 
     <ion-input fill="outline" label="NIM" type="number" ></ion-input>
     <!-- Uncomment Ini untuk debugging -->
-     <!-- <p>{{ nim }}</p> -->
+     <!-- <p>{{ dataWillSubmitted.nim }}</p> -->
      
     <ion-select fill="outline" label="Kelas" >
       <ion-select-option *ngFor="let class of classData" >{{ class }}</ion-select-option>
     </ion-select>
 
     <!-- Uncomment Ini untuk debugging -->
-     <!-- <p>{{ class }}</p> -->
+     <!-- <p>{{ dataWillSubmitted.class }}</p> -->
 
-    <ion-button>Tambah</ion-button>
+     <!-- Kerjakan Ini!!! -->
+     <!-- Silahkan Kerjakan fungsi submitData di home.page.ts -->
+    <ion-button (click)="submitData()" >Tambah</ion-button>
 
     
   </div>
+
+  <!-- Kerjakan Ini!!! -->
+  <!-- Silahkan Tampilkan data dari variabel personData di home.page.ts. Petunjuk : Gunakan Looping *ngFor -->
 
   <div class="result-area">
 
     <!-- Tampilkan Data dengan mengubah code dibawah ini -->
      <!-- Lakukan dengan memanfaatkan looping -->
+
     <h1>Person 1</h1>
     <p>Nama : Jibrail </p>
     <p>NIM : 2241625520124</p>
     <p>Kelas : IF22A </p>
+
+    <!-- Ini Button Edit -->
+     <!-- Kerjakan!!! -->
+      <!-- Silahkan sambungkan button ini ke fungsi openEditForm() -->
+    <ion-button >Edit</ion-button>
+
+
+    <!-- Ini Button Delete  -->
+     <!-- Kerjakan!!! -->
+      <!-- Silahkan sambungkan button ini ke fungsi onDelete(id). note : Jangan lupa kasih parameter id dari setiap data. Data yang berasal dari setiap looping -->
+    <ion-button color="danger">Delete</ion-button>
+
+    <!-- Anggap Komponen Untuk Edit Data -->
+    <div *ngIf="isEditedMode === true" >
+      <div class="input-area" >
+        <ion-input fill="outline" label="Nama" ></ion-input>
+        <!-- Uncomment Ini untuk debugging -->
+         <!-- <p>{{ name }}</p> -->
+    
+        <ion-input fill="outline" label="NIM" type="number" ></ion-input>
+        <!-- Uncomment Ini untuk debugging -->
+         <!-- <p>{{ nim }}</p> -->
+         
+        <ion-select fill="outline" label="Kelas" >
+          <ion-select-option *ngFor="let class of classData"  >{{ class }}</ion-select-option>
+        </ion-select>
+        <!-- Uncomment Ini untuk debugging -->
+         <!-- <p>{{ class }}</p> -->
+    
+         <!-- Ini Button Edit  -->
+          <!-- Kerjakan!!! -->
+            <!-- Silahkan sambungkan button ini ke fungsi editData(id). note : Jangan lupa kasih parameter id dari setiap data. Data yang berasal dari setiap looping -->
+        <ion-button  >Edit Data</ion-button>
+    
+        
+      </div>
+    </div>
 
 
     
