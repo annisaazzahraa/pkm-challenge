@@ -25,3 +25,19 @@
 #container a {
   text-decoration: none;
 }
+
+.input-area{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+
+  ion-input,ion-select{
+    margin: 10px;
+  }
+
+  ion-button{
+    align-self: flex-start;
+  }
+}

@@ -13,8 +13,38 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="input-area" >
+    <ion-input fill="outline" label="Nama" [(ngModel)] = "name" ></ion-input>
+    <!-- Uncomment Ini untuk debugging -->
+     <!-- <p>{{ name }}</p> -->
+
+    <ion-input fill="outline" label="NIM" type="number" ></ion-input>
+    <!-- Uncomment Ini untuk debugging -->
+     <!-- <p>{{ nim }}</p> -->
+     
+    <ion-select fill="outline" label="Kelas" >
+      <ion-select-option *ngFor="let class of classData" >{{ class }}</ion-select-option>
+    </ion-select>
+
+    <!-- Uncomment Ini untuk debugging -->
+     <!-- <p>{{ class }}</p> -->
+
+    <ion-button>Tambah</ion-button>
+
+    
   </div>
+
+  <div class="result-area">
+
+    <!-- Tampilkan Data dengan mengubah code dibawah ini -->
+     <!-- Lakukan dengan memanfaatkan looping -->
+    <h1>Person 1</h1>
+    <p>Nama : Jibrail </p>
+    <p>NIM : 2241625520124</p>
+    <p>Kelas : IF22A </p>
+
+
+    
+  </div>
+
 </ion-content>
