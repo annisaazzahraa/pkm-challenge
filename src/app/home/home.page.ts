@@ -71,7 +71,7 @@ export class HomePage {
 
 
   // Ini Variabel untuk Edit data
-  // Manfaat variabel ini untuk proses edit data
+  // Manfaatkan variabel ini untuk proses edit data
   name = ""
   nim = ""
   class = ""
